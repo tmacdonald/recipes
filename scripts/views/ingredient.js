@@ -5,7 +5,7 @@ define(['backbone', 'text!templates/ingredient.html'], function(Backbone, ingred
 		template: _.template(ingredientTemplate),
 
 		render: function() {
-			$(this.el).html(this.template(this.model));
+			$(this.el).html(this.template(this.model.toJSON()));
 			return this;
 		}
 	});

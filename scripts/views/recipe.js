@@ -15,11 +15,11 @@ define(
 
 			$(this.el).html(this.template(this.model.toJSON()));
 
-			if (this.model.get('ingredients')) {
-				$.each(this.model.get('ingredients'), function(i, ingredient) {
+			if (this.model.ingredients) {
+				this.model.ingredients.each(function(ingredient){
 					var ingredientView = new IngredientView({model: ingredient});
-					self.$('.ingredients').append(ingredientView.render().el);
-				});	
+					this.$('.ingredients').append(ingredientView.render().el);
+				}, this);
 			}
 
 			return this;

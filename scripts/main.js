@@ -23,12 +23,8 @@ require.config({
 
 require([
 	'routers/router', 
-	'views/application', 
 	'bootstrap'
-	], function(Router, ApplicationView) {
-	
+], function(Router) {
 	var router = new Router;
 	Backbone.history.start();
-	
-	var applicationView = new ApplicationView;
 });

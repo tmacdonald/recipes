@@ -12,8 +12,6 @@ define(
 		template: _.template(recipeTemplate),
 		
 		render: function() {
-			var self = this;
-
 			$(this.el).html(this.template(this.model.toJSON()));
 
 			if (this.model.ingredients) {

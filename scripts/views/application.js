@@ -4,7 +4,6 @@ define(['backbone', 'collections/recipes', 'views/recipe'], function(Backbone, R
 		el: $('#app'),
 		
 		events: {
-			"keypress #new-recipe": "createOnEnter"
 		},
 		
 		initialize: function() {
@@ -29,21 +28,6 @@ define(['backbone', 'collections/recipes', 'views/recipe'], function(Backbone, R
 		
 		render: function() {
 			
-		},
-		
-		createOnEnter: function(e) {
-			if (e.keyCode !== 13) { // enter key
-				return;
-			}
-			
-			var $target = $(e.target);
-			
-			if (!$target.val().trim()) { // empty input
-				return;
-			}
-			
-			Recipes.create({name: $target.val()});
-			$target.val('');
 		}
 	});
 	

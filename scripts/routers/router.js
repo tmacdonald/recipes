@@ -1,12 +1,14 @@
 define([
 	'backbone',
 	'collections/recipes',
-	'views/recipe-list'
-], function(Backbone, Recipes, RecipeListView) {
+	'models/recipe',
+	'views/recipe-list',
+	'views/recipes/new'
+], function(Backbone, Recipes, Recipe, RecipeListView, NewRecipeView) {
 	var Router = Backbone.Router.extend({
 		routes: {
 			"": "defaultRoute",
-			"*filter": "setFilter"
+			"recipes/new": "newRecipe"
 		},
 		
 		defaultRoute: function() {
@@ -15,8 +17,12 @@ define([
 			Recipes.fetch();
 		},
 
-		setFilter: function() {
-			
+		newRecipe: function() {
+			var newRecipeView = new NewRecipeView({model: new Recipe(), collection: Recipes});
+			newRecipeView.on('created', function(){
+				this.navigate("", {trigger: true});
+			}, this);
+			$('#app').html(newRecipeView.render().el);
 		}
 	});
 	

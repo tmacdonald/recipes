@@ -1,6 +1,6 @@
 define(['backbone', 'text!templates/ingredient.html'], function(Backbone, ingredientTemplate) {
 	var IngredientView = Backbone.View.extend({
-		tagName: 'p',
+		tagName: 'span',
 
 		template: _.template(ingredientTemplate),
 

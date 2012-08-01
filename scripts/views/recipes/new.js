@@ -20,7 +20,11 @@ define([
 		save: function(e) {
 			e.preventDefault();
 
-			this.collection.create({name: this.$('#name').val()});
+			this.collection.create({
+				name: this.$('#name').val(),
+				description: this.$('#description').val(),
+				servings: this.$('#servings').val()
+			});
 
 			this.trigger("created");
 		}

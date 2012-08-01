@@ -19,10 +19,12 @@ define([
 
 		newRecipe: function() {
 			var newRecipeView = new NewRecipeView({model: new Recipe(), collection: Recipes});
-			newRecipeView.on('created', function(){
-				this.navigate("", {trigger: true});
-			}, this);
+			newRecipeView.on('created', this.navigateToDefaultRoute, this);
 			$('#app').html(newRecipeView.render().el);
+		},
+
+		navigateToDefaultRoute: function() {
+			this.navigate("", {trigger: true});
 		}
 	});
 	

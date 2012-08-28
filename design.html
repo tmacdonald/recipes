@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Design</title>
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Brawler' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+
+        <style>
+            body { font-family: 'Merriweather', sans-serif; font-size: 1em; color: #41413f; background: #f9f7f7; }
+            h1 { line-height: 3em; font-weight: 700; font-family: 'Merriweather', serif;}
+            h2 { line-height: 3em; font-weight: 400; font-family: 'Merriweather', serif; }
+            ul { font-weight: 300; list-style: none; overflow: hidden; margin: 0; -webkit-column-count: 3; }
+            @media (max-width: 1024px ) {
+                ul { -webkit-column-count: 2; }
+            }
+            @media (max-width: 768px ) {
+                ul { -webkit-column-count: 1; }
+            }
+            ol { font-weight: 300; margin: 0;}
+            ul li { line-height: 2.5em; }
+            ol li { line-height: 2.5em; padding: 0 0 1em 0; }
+            .amount { font-size: 1.25em;}
+            .ingredient {  }
+            
+            .highlight { color: #f92772; }
+
+            p { line-height: 2.2em; font-weight: 300; font-family: 'Merriweather', serif; }
+            a { color: #968a77; }
+            a:hover { color: #f92772; cursor: pointer; }
+            /*a:visited { color: #fff; background: #f92772; }*/
+
+        </style>
+    </head>
+    <body>
+    	<div class="container">
+    		<h1>Chicken Enchiladas</h1>
+
+            <div id="description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed nulla sem, eu sollicitudin felis. Phasellus lobortis lacus eu nisl interdum rhoncus. Vivamus et magna vitae lacus viverra egestas. <a>Fusce ipsum nulla</a>, eleifend ut pharetra tincidunt, suscipit eget nibh. Pellentesque non turpis eget urna auctor consequat. Etiam pulvinar orci id mauris scelerisque vitae vestibulum arcu malesuada. Pellentesque mi urna, <a href="http://google.ca">fermentum a sollicitudin</a> in, adipiscing sit amet diam. Etiam lobortis metus eu neque consectetur ac commodo augue bibendum.</p>
+            </div>
+
+            <div class="">
+                <div class="">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li><span class="amount">4</span> <span class="ingredient">skinless, boneless <span id="chicken">chicken</span> breast halves</span></li>
+                        <li><span class="amount">1</span> <span class="ingredient">onion</span>, chopped</li>
+                        <li><span class="amount">&frac12;</span> pint <span class="ingredient">sour cream</span></li>
+                        <li><span class="amount">1</span> cup shredded <span class="ingredient">Cheddar cheese</span></li>
+                        <li><span class="amount">1</span> tablespoon dried <span class="ingredient">parsley</span></li>
+                        <li><span class="amount">&frac12;</span> teaspoon dried <span class="ingredient">oregano</span></li>
+                        <li><span class="amount">&frac12;</span> teaspoon ground <span class="ingredient">black pepper</span></li>
+                        <li><span class="amount">&frac12;</span> teaspoon <span class="ingredient">salt</span> (optional)</li>
+                        <li><span class="amount">1</span> (15 ounce) can <span class="ingredient">tomato sauce</span></li>
+                        <li><span class="amount">&frac12;</span> cup <span class="ingredient">water</span></li>
+                        <li><span class="amount">1</span> tablespoon <span class="ingredient">chili powder</span></li>
+                        <li><span class="amount">&frac13;</span> cup chopped <span class="ingredient">green bell pepper</span></li>
+                        <li><span class="amount">1</span> clove <span class="ingredient">garlic</span>, minced</li>
+                        <li><span class="amount">8</span> (10 inch) <span class="ingredient">flour tortillas</span></li>
+                        <li><span class="amount">1</span> (12 ounce) jar <span class="ingredient">taco sauce</span></li>
+                        <li><span class="amount">&frac34;</span> cup shredded <span class="ingredient">Cheddar cheese</span></li>
+                    </ul>
+                </div>
+    		
+                <div class="">
+                    <h2>Directions</h2>
+                    <ol>
+                        <li>Preheat oven to 350 degrees F (175 degrees C).</li>
+                        <li>In a medium, non-stick skillet over medium heat, cook chicken until no longer pink and juices run clear. Drain excess fat. Cube the chicken and return it to the skillet. Add the onion, sour cream, Cheddar cheese, parsley, oregano and ground black pepper. Heat until cheese melts. Stir in salt, tomato sauce, water, chili powder, green pepper and garlic.</li>
+                        <li>Roll even amounts of the mixture in the tortillas. Arrange in a 9x13 inch baking dish. Cover with taco sauce and 3/4 cup Cheddar cheese. Bake uncovered in the preheated oven 20 minutes. Cool 10 minutes before serving.</li>
+                    </ol>
+                </div>
+            </div>
+    	</div>
+        
+        <script data-main="scripts/main" src="scripts/require/require.js"></script>
+    </body>
+</html>

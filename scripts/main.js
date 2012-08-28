@@ -14,7 +14,7 @@ require.config({
 	},
 	
 	paths: {
-		jquery: 'jquery-1.7.2',
+		jquery: 'jquery-1.8.0',
 		underscore: 'underscore',
 		backbone: 'backbone',
 		text: 'require/text'
@@ -28,3 +28,4 @@ require([
 	var router = new Router;
 	Backbone.history.start();
 });
+

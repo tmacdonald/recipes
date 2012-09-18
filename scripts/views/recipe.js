@@ -1,11 +1,11 @@
 define(
 	[
-		'backbone', 
+		'./view', 
 		'text!templates/recipe.html',
-		'views/ingredient',
-		'views/direction'
-	], function(Backbone, recipeTemplate, IngredientView, DirectionView){
-	var RecipeView = Backbone.View.extend({
+		'./ingredient',
+		'./direction'
+	], function(View, recipeTemplate, IngredientView, DirectionView){
+	var RecipeView = View.extend({
 		
 		tagName: 'tr',
 		

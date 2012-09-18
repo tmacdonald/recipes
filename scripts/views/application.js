@@ -1,5 +1,10 @@
-define(['backbone', 'collections/recipes', 'views/recipe'], function(Backbone, Recipes, RecipeView){
-	var ApplicationView = Backbone.View.extend({
+define([
+	'./view', 
+	'collections/recipes', 
+	'./recipe'
+], function(View, Recipes, RecipeView) {
+
+	var ApplicationView = View.extend({
 		
 		el: $('#app'),
 		

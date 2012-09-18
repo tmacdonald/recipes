@@ -1,5 +1,8 @@
-define(['backbone', 'text!templates/ingredient.html'], function(Backbone, ingredientTemplate) {
-	var IngredientView = Backbone.View.extend({
+define([
+	'./view', 
+	'text!templates/ingredient.html'
+], function(View, ingredientTemplate) {
+	var IngredientView = View.extend({
 		tagName: 'span',
 
 		template: _.template(ingredientTemplate),

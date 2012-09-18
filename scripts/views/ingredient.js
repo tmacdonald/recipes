@@ -1,11 +1,12 @@
 define([
 	'./view', 
+	'lib/templating',
 	'text!templates/ingredient.html'
-], function(View, ingredientTemplate) {
+], function(View, TemplateEngine, ingredientTemplate) {
 	var IngredientView = View.extend({
 		tagName: 'span',
 
-		template: _.template(ingredientTemplate),
+		template: TemplateEngine.template(ingredientTemplate),
 
 		render: function() {
 			$(this.el).html(this.template(this.model.toJSON()));

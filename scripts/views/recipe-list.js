@@ -1,10 +1,10 @@
 define([
-	'backbone', 'underscore', 'views/recipe', 'text!templates/recipe-list.html'
-], function(Backbone, _, RecipeView, recipeListTemplate) {
+	'./view', 'lib/templating', './recipe', 'text!templates/recipe-list.html'
+], function(View, TemplateEngine, RecipeView, recipeListTemplate) {
 
-	var RecipeListView = Backbone.View.extend({
+	var RecipeListView = View.extend({
 
-		template: _.template(recipeListTemplate),
+		template: TemplateEngine.template(recipeListTemplate),
 
 		initialize: function() {
 			this.collection.on('add', this.addOne, this);

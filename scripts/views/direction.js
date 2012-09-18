@@ -1,13 +1,13 @@
 define([
-	'backbone',
-	'underscore',
+	'./view',
+	'lib/templating',
 	'text!templates/direction.html'
-], function(Backbone, _, directionTemplate) {
+], function(View, TemplateEngine, directionTemplate) {
 
-	var DirectionView = Backbone.View.extend({
+	var DirectionView = View.extend({
 		tagName: 'span',
 
-		template: _.template(directionTemplate),
+		template: TemplateEngine.template(directionTemplate),
 
 		render: function() {
 			this.$el.html(this.template(this.model.toJSON()));

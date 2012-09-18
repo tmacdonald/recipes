@@ -1,12 +1,12 @@
 define([
-	'backbone',
-	'underscore',
+	'../view',
+	'../../lib/templating',
 	'text!templates/recipes/new.html'
-], function(Backbone, _, recipeTemplate) {
+], function(View, TemplateEngine, recipeTemplate) {
 
-	var NewRecipeView = Backbone.View.extend({
+	var NewRecipeView = View.extend({
 
-		template: _.template(recipeTemplate),
+		template: TemplateEngine.template(recipeTemplate),
 
 		events: {
 			"submit form": "save"

@@ -1,10 +1,10 @@
 define([
-	'backbone',
+	'./collection',
 	'backbone-localstorage',
 	'models/recipe'
-], function(Backbone, Store, Recipe) {
+], function(Collection, Store, Recipe) {
 	
-	var Recipes = Backbone.Collection.extend({
+	var Recipes = Collection.extend({
 		model: Recipe,
 	
 		localStorage: new Store('recipes-backbone')	

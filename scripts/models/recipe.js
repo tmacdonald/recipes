@@ -1,9 +1,9 @@
 define([
-	'backbone',
+	'./model',
 	'collections/ingredients',
 	'collections/directions'
-], function(Backbone, Ingredients, Directions){
-	var Recipe = Backbone.Model.extend({
+], function(Model, Ingredients, Directions){
+	var Recipe = Model.extend({
 		parse: function(resp, xhr) {
 			this.ingredients = new Ingredients;
 			this.ingredients.reset(resp.ingredients);

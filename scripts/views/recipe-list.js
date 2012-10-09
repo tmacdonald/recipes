@@ -1,5 +1,5 @@
 define([
-	'./view', 'lib/templating', './recipe', 'text!templates/recipe-list.html'
+	'./view', '../lib/templating', './recipe-list-item', 'text!templates/recipe-list.html'
 ], function(View, TemplateEngine, RecipeView, recipeListTemplate) {
 
 	var RecipeListView = View.extend({

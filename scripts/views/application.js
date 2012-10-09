@@ -1,8 +1,6 @@
 define([
-	'./view', 
-	'collections/recipes', 
-	'./recipe'
-], function(View, Recipes, RecipeView) {
+	'./view'
+], function(View) {
 
 	var ApplicationView = View.extend({
 		

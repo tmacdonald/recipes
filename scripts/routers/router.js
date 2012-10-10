@@ -12,23 +12,29 @@ define([
 			"recipes/:id": "viewRecipe",
 			"recipes/new": "newRecipe"
 		},
+
+		initialize: function() {
+			this.recipes = new Recipes();
+			this.recipes.fetch();
+		},
 		
 		defaultRoute: function() {
-			var recipeListView = new RecipeListView({collection: Recipes});
+			var recipeListView = new RecipeListView({collection: this.recipes});
 			$('#app').html(recipeListView.render().el);
-			Recipes.fetch();
 		},
 
 		viewRecipe: function(id) {
 			var recipe, view;
 
-			recipe = Recipes.getByCid(id);
+			recipe = new Recipe({id: id});
+			recipe.fetch();
+
 			recipeView = new RecipeView({model: recipe});
 			$('#app').html(recipeView.render().el);
 		},
 
 		newRecipe: function() {
-			var newRecipeView = new NewRecipeView({model: new Recipe(), collection: Recipes});
+			var newRecipeView = new NewRecipeView({model: new Recipe(), collection: this.recipes});
 			newRecipeView.on('created', this.navigateToDefaultRoute, this);
 			$('#app').html(newRecipeView.render().el);
 		},

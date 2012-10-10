@@ -6,9 +6,8 @@ define([
 	
 	var Recipes = Collection.extend({
 		model: Recipe,
-	
 		localStorage: new Store('recipes-backbone')	
 	});
 	
-	return new Recipes;
+	return Recipes;
 });

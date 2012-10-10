@@ -1,8 +1,9 @@
 define([
-	'./model'
-], function(Model){
+	'./model',
+	'backbone-localstorage',
+], function(Model, Store){
 	var Recipe = Model.extend({
-		
+		localStorage: new Store('recipes-backbone')	
 	});
 	
 	return Recipe;

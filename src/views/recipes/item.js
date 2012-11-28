@@ -5,7 +5,7 @@ define(
 		'./ingredient',
 		'./direction'
 	], function(View, recipeTemplate, IngredientView, DirectionView){
-	var RecipeListItemView = View.extend({
+	var RecipesItemView = View.extend({
 
 		tagName: 'tr',
 
@@ -18,5 +18,5 @@ define(
 		}
 	});
 
-	return RecipeListItemView;
+	return RecipesItemView;
 });

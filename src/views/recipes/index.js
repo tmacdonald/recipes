@@ -1,13 +1,13 @@
 /*global define */
 
 define([
-	'./view',
-	'../lib/templating',
-	'./recipe-list-item',
+	'../view',
+	'../../lib/templating',
+	'./item',
 	'text!templates/recipes/index.html'
 ], function(View, TemplateEngine, RecipeView, recipeListTemplate) {
 
-	var RecipeListView = View.extend({
+	var RecipesIndexView = View.extend({
 
 		template: TemplateEngine.template(recipeListTemplate),
 
@@ -37,6 +37,6 @@ define([
 
 	});
 
-	return RecipeListView;
+	return RecipesIndexView;
 
 });

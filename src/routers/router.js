@@ -5,7 +5,7 @@ define([
 	'backbone',
 	'collections/recipes/recipes',
 	'models/recipes/recipe',
-	'views/recipe-list',
+	'views/recipes/index',
 	'views/recipes/new',
 	'views/recipes/view'
 ], function($, Backbone, Recipes, Recipe, RecipeListView, NewRecipeView, RecipeView) {

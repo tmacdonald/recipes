@@ -1,5 +1,5 @@
 define([
-	'./model',
+	'models/model',
 	'lib/backbone-localstorage',
 ], function(Model, Store){
 	var Recipe = Model.extend({

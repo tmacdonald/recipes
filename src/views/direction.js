@@ -1,7 +1,7 @@
 define([
 	'./view',
 	'lib/templating',
-	'text!templates/direction.html'
+	'text!templates/recipes/direction.html'
 ], function(View, TemplateEngine, directionTemplate) {
 
 	var DirectionView = View.extend({

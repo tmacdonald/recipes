@@ -1,7 +1,7 @@
 define([
-	'./view', 
+	'./view',
 	'lib/templating',
-	'text!templates/ingredient.html'
+	'text!templates/recipes/ingredient.html'
 ], function(View, TemplateEngine, ingredientTemplate) {
 	var IngredientView = View.extend({
 		tagName: 'span',

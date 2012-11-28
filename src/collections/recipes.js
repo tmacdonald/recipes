@@ -1,7 +1,7 @@
 define([
-	'collections/collection',
+	'./collection',
 	'lib/backbone-localstorage',
-	'models/recipes/recipe'
+	'models/recipe'
 ], function(Collection, Store, Recipe) {
 	"use strict";
 

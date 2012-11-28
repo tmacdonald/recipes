@@ -3,8 +3,8 @@
 define([
 	'jquery',
 	'backbone',
-	'collections/recipes',
-	'models/recipe',
+	'collections/recipes/recipes',
+	'models/recipes/recipe',
 	'views/recipe-list',
 	'views/recipes/new',
 	'views/recipes/view'
@@ -20,7 +20,7 @@ define([
 			this.recipes = new Recipes();
 			this.recipes.fetch();
 		},
-		
+
 		defaultRoute: function() {
 			var recipeListView = new RecipeListView({collection: this.recipes});
 			$('#app').html(recipeListView.render().el);
@@ -46,6 +46,6 @@ define([
 			this.navigate("", {trigger: true});
 		}
 	});
-	
+
 	return Router;
 });

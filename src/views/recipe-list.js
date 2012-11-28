@@ -1,7 +1,10 @@
 /*global define */
 
 define([
-	'./view', '../lib/templating', './recipe-list-item', 'text!templates/recipe-list.html'
+	'./view',
+	'../lib/templating',
+	'./recipe-list-item',
+	'text!templates/recipes/index.html'
 ], function(View, TemplateEngine, RecipeView, recipeListTemplate) {
 
 	var RecipeListView = View.extend({
@@ -18,10 +21,10 @@ define([
 
 			this.$('#recipes').append(view.render().el);
 		},
-		
+
 		addAll: function() {
 			this.$('#recipes').html('');
-			
+
 			this.collection.each(this.addOne, this);
 		},
 

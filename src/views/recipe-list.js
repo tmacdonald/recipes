@@ -1,3 +1,5 @@
+/*global define */
+
 define([
 	'./view', '../lib/templating', './recipe-list-item', 'text!templates/recipe-list.html'
 ], function(View, TemplateEngine, RecipeView, recipeListTemplate) {
@@ -25,6 +27,7 @@ define([
 
 		render: function() {
 			this.$el.html(this.template());
+			this.addAll();
 
 			return this;
 		}

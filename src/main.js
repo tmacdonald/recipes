@@ -1,3 +1,5 @@
+/*global require*/
+
 require.config({
 	shim: {
 		'underscore': {
@@ -12,20 +14,22 @@ require.config({
 			exports: 'Bootstrap'
 		}
 	},
-	
+
 	paths: {
-		jquery: 'jquery-1.8.0',
-		underscore: 'underscore',
-		backbone: 'backbone',
-		text: 'require/text'
+		jquery: 'lib/jquery-1.8.0',
+		underscore: 'lib/underscore',
+		backbone: 'lib/backbone',
+		bootstrap: 'lib/bootstrap',
+		text: 'lib/require/text'
 	}
 });
 
 require([
-	'routers/router', 
+	'routers/router',
+	'backbone',
 	'bootstrap'
-], function(Router) {
-	var router = new Router;
+], function(Router, Backbone) {
+	var router = new Router();
 	Backbone.history.start();
 });
 

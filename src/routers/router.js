@@ -1,11 +1,14 @@
+/*global define */
+
 define([
+	'jquery',
 	'backbone',
 	'collections/recipes',
 	'models/recipe',
 	'views/recipe-list',
 	'views/recipes/new',
 	'views/recipes/view'
-], function(Backbone, Recipes, Recipe, RecipeListView, NewRecipeView, RecipeView) {
+], function($, Backbone, Recipes, Recipe, RecipeListView, NewRecipeView, RecipeView) {
 	var Router = Backbone.Router.extend({
 		routes: {
 			"": "defaultRoute",

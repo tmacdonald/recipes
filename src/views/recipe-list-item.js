@@ -12,7 +12,7 @@ define(
 		template: _.template(recipeTemplate),
 		
 		render: function() {
-			$(this.el).html(this.template({model: this.model.toJSON(), cid: this.model.cid}));
+			$(this.el).html(this.template({model: this.model.toJSON(), id: this.model.id}));
 
 			return this;
 		}

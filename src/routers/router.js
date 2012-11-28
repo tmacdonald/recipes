@@ -8,7 +8,7 @@ define([
 	'views/recipes/index',
 	'views/recipes/new',
 	'views/recipes/view'
-], function($, Backbone, Recipes, Recipe, RecipeListView, NewRecipeView, RecipeView) {
+], function($, Backbone, Recipes, Recipe, RecipesIndexView, NewRecipeView, RecipeView) {
 	var Router = Backbone.Router.extend({
 		routes: {
 			"": "defaultRoute",
@@ -22,8 +22,8 @@ define([
 		},
 
 		defaultRoute: function() {
-			var recipeListView = new RecipeListView({collection: this.recipes});
-			$('#app').html(recipeListView.render().el);
+			var recipesIndexView = new RecipesIndexView({collection: this.recipes});
+			$('#app').html(recipesIndexView.render().el);
 		},
 
 		viewRecipe: function(id) {

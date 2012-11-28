@@ -12,8 +12,8 @@ define([
 	var Router = Backbone.Router.extend({
 		routes: {
 			"": "defaultRoute",
-			"recipes/:id": "viewRecipe",
-			"recipes/new": "newRecipe"
+			"recipes/new": "newRecipe",
+			"recipes/:id": "viewRecipe"
 		},
 
 		initialize: function() {

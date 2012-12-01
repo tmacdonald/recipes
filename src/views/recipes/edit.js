@@ -4,7 +4,7 @@ define([
 	'text!templates/recipes/new.html'
 ], function(View, TemplateEngine, recipeTemplate) {
 
-	var NewRecipeView = View.extend({
+	var EditRecipeView = View.extend({
 
 		template: TemplateEngine.template(recipeTemplate),
 
@@ -28,13 +28,11 @@ define([
 				directions: this.$('#directions').val()
 			});
 
-			this.collection.create(this.model);
-
-			this.trigger("created");
+			this.model.save();
 		}
 
 	});
 
-	return NewRecipeView;
+	return EditRecipeView;
 
 });

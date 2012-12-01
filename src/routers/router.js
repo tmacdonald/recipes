@@ -7,13 +7,15 @@ define([
 	'models/recipes/recipe',
 	'views/recipes/index',
 	'views/recipes/new',
+	'views/recipes/edit',
 	'views/recipes/view'
-], function($, Backbone, Recipes, Recipe, RecipesIndexView, NewRecipeView, RecipeView) {
+], function($, Backbone, Recipes, Recipe, IndexView, NewView, EditView, DetailsView) {
 	var Router = Backbone.Router.extend({
 		routes: {
 			"": "defaultRoute",
 			"recipes/new": "newRecipe",
-			"recipes/:id": "viewRecipe"
+			"recipes/:id": "viewRecipe",
+			"recipes/:id/edit": "editRecipe"
 		},
 
 		initialize: function() {
@@ -22,7 +24,7 @@ define([
 		},
 
 		defaultRoute: function() {
-			var recipesIndexView = new RecipesIndexView({collection: this.recipes});
+			var recipesIndexView = new IndexView({collection: this.recipes});
 			$('#app').html(recipesIndexView.render().el);
 		},
 
@@ -32,14 +34,24 @@ define([
 			recipe = new Recipe({id: id});
 			recipe.fetch();
 
-			recipeView = new RecipeView({model: recipe});
+			recipeView = new DetailsView({model: recipe});
 			$('#app').html(recipeView.render().el);
 		},
 
 		newRecipe: function() {
-			var newRecipeView = new NewRecipeView({model: new Recipe(), collection: this.recipes});
+			var newRecipeView = new NewView({model: new Recipe(), collection: this.recipes});
 			newRecipeView.on('created', this.navigateToDefaultRoute, this);
 			$('#app').html(newRecipeView.render().el);
+		},
+
+		editRecipe: function(id) {
+			var recipe, view;
+
+			recipe = new Recipe({id: id});
+			recipe.fetch();
+
+			recipeView = new EditView({model: recipe});
+			$('#app').html(recipeView.render().el);
 		},
 
 		navigateToDefaultRoute: function() {

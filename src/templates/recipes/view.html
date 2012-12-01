@@ -1,3 +1,7 @@
 <h2><%= model.name %></h2>
 
 <p class="description"><%= model.description %></p>
+
+<p class="ingredients"><%= model.ingredients.replace(/\n/g, '<br/>') %></p>
+
+<p class="directions"><%= model.directions.replace(/\n/g, '<br/>') %></p>
